@@ -256,18 +256,18 @@
     }
   };
 
-  var servicesAnimate = function() {
-    var services = $('#fh5co-services');
-    if ( services.length > 0 ) {
-      services.waypoint( function( direction ) {
+  var irealtrumpetAnimate = function() {
+    var irealtrumpet = $('#fh5co-irealtrumpet');
+    if ( irealtrumpet.length > 0 ) {
+      irealtrumpet.waypoint( function( direction ) {
 
         if( direction === 'down' && !$(this.element).hasClass('animated') ) {
 
-          var sec = services.find('.to-animate').length;
+          var sec = irealtrumpet.find('.to-animate').length;
           sec = parseInt((sec * 200) + 400);
 
           setTimeout(function() {
-            services.find('.to-animate').each(function( k ) {
+            irealtrumpet.find('.to-animate').each(function( k ) {
               var el = $(this);
 
               setTimeout ( function () {
@@ -278,7 +278,7 @@
           }, 200);
 
           setTimeout(function() {
-            services.find('.to-animate-2').each(function( k ) {
+            irealtrumpet.find('.to-animate-2').each(function( k ) {
               var el = $(this);
 
               setTimeout ( function () {
@@ -407,12 +407,8 @@
 
     // Animations
     homeAnimate();
-    introAnimate();
     eternalTriangleAnimate();
-    testimonialAnimate();
-    servicesAnimate();
-    aboutAnimate();
-    countersAnimate();
+    irealtrumpetAnimate();
     contactAnimate();
   });
 
